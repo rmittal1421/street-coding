@@ -14,6 +14,9 @@ struct Node {
 	}
 };
 
+//Following solution is not correct.
+//Right approach will be to traverse the tree in inorder fashion and check if the output is sorted.
+//If true, tree is BST, otherwise not.
 bool checkLeft(Node* n, int val) {
 	if ((n == NULL) || (n->data < val)) return true;
 	else return false;
