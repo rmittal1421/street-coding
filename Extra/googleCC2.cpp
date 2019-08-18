@@ -10,8 +10,8 @@ int main() {
 	int n = arr.size();
 	vector<vector<bool>> dp(n+1, vector<bool>(t+1));
 	for(int i=0; i<=n; i++)  dp[i][0] = 1;
-  for(int i = 0; i <= t; ++i) dp[0][i] = 0;
-  dp[0][0] = 1;
+	for(int i = 0; i <= t; ++i) dp[0][i] = 0;
+	dp[0][0] = 1;
 	for(int i=1; i<=n; i++) {
 		for(int j=1; j<=t; j++) {
 			if(arr[i-1] <= j) dp[i][j] = dp[i-1][j] || dp[i-1][j-arr[i-1]];
@@ -20,7 +20,7 @@ int main() {
 	}
 	for(auto dd : dp) {
 		for(auto d : dd) cout << d << " " ;
-		cout << endl;
+			cout << endl;
 	}
 	int p = t/2;
 	int res;
@@ -32,4 +32,4 @@ int main() {
 	}
 	cout << res << endl;
 	return 0;
-} 
+	} 
