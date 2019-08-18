@@ -15,7 +15,6 @@ public:
             vector<int> fre(26);
             bool canForm = true;
             for(char c : s) {
-                // fre[c-'a']++;
                 int count = ++fre[c-'a'];
                 if(map.find(c) == map.end()) {
                     canForm = false;
